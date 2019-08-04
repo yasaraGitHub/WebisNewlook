@@ -1,0 +1,25 @@
+<form (submit)="signUp()">
+<div  class="card-panel grey lighten-3">
+  <h5 style="text-align:center">Get registered now  <i class="fas fa-hand-point-down"></i></h5>
+  <br>
+  <ng-flash-message></ng-flash-message>
+  <div class="input-field">
+    <input type="text" [(ngModel)]="name" name="name" placeholder="Name" id="name">
+
+    <label for="name"><i class="fas fa-user"></i> Name</label>
+  </div>
+  <div class="input-field">
+      <input type="text" [(ngModel)]="email" name="email" placeholder="Email" id="email">
+      <label for="email"><i class="fas fa-envelope"></i> Email</label>
+  </div>
+  <div class="input-field">
+      <input type="text"  [(ngModel)]="username" name="username" placeholder="Username" id="username">
+      <label for="username"><i class="fas fa-user-tag"></i> Username</label>
+  </div>
+  <div class="input-field">
+      <input  type="password" [(ngModel)]="password" name="password" placeholder="Password" id="password">
+      <label for="password"><i class="fas fa-lock"></i> Password</label>
+  </div>
+  <input type="submit" value="Submit" class="btn #aa00ff purple accent-4">
+</div>
+</form>

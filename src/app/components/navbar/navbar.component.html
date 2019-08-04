@@ -1,0 +1,48 @@
+<div class="navbar-fixed">
+  <nav class="#d500f9 purple accent-3">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">WEBIS</a>
+
+        <ul class="right hide-on-med-and-down">
+
+         
+          
+
+          <li>
+            <a href="#home">Home</a>
+          </li>
+
+          <li>
+            <a href="#categories">Categories</a>
+          </li>
+          <li>
+            <a href="#search">Courses</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li *ngIf="!user" class="nav-item">
+            <a class="nav-link" routerLink="/login" class="waves-effect #aa00ff purple accent-4 btn"><i
+                class="material-icons left">exit_to_app</i>Login</a>
+          </li>
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <li *ngIf="user" ngbDropdown class="nav-item dropdown show">
+              <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="color:white"
+                routerLinkActive="active-link">{{user.displayName}}</a>
+              <div ngbDropdownMenu class="dropdown-menu show" aria-labelledby="dropdown01">
+                <a class="dropdown-item" routerLink="category"><b>My Courses</b></a>
+
+                <a class="dropdown-item" routerLink="" (click)="logout()"><b>Log Out</b></a>
+                <a class="dropdown-item" routerLink="CourseDetailsForm"><b>Content Provider</b></a>
+
+              </div>
+            </li>
+          </div>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
